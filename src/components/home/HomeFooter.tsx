@@ -17,7 +17,7 @@ export default function Home2Footer() {
         {/* Logo */}
         <div className="mb-8">
           <Link href="/" className="text-xl font-bold text-black">
-            Brand
+            ReservApp
           </Link>
         </div>
 
@@ -40,7 +40,7 @@ export default function Home2Footer() {
 
         {/* Copyright */}
         <p className="text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} Brand. All rights reserved.
+          © {new Date().getFullYear()} ReservApp. All rights reserved.
         </p>
       </div>
     </footer>

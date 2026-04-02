@@ -1,39 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { link } from "fs";
 
 const services = [
   {
-    number: "01",
-    title: "Inline embed",
+    title: "Landing Page + Reservas + Whastapp",
     description:
-      "Display the booking calendar directly in your page. Perfect for pages where you want scheduling to be the main focus.",
+      "Tus clientes pueden reservar sus turnos de forma automatica y vos solo los recibis en tu calendario.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      "",
+    link: "/reserva/demo",
   },
   {
-    number: "02",
-    title: "Floating pop-up button",
+    title: "Landing + Menú/Catalogo + WhatsApp Order",
     description:
-      "Use a persistent button that triggers a modal. Keep your booking option accessible from anywhere on the site.",
+      "Mostra tu menu, productos y recibi pedidos directamente en tu WhatsApp.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      "",
+    link: "/catalogo/demo",
   },
   {
-    number: "03",
-    title: "Pop-up via element click",
+    title: "Landing + Servicios + Contacto WP",
     description:
-      'Link the embed to a custom element like a "Book Now" button or link. Full control over the trigger.',
+      'Mostra tus servicios, que el cliente conozca mejor lo que haces y se contacte con vos',
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      "",
+    link: "/servicios/demo",
   },
   {
-    number: "04",
-    title: "Email embed",
+    title: "Landing + Catálogo + Carrito + WP Checkout",
     description:
-      "Add personalized booking links in your emails. Let clients schedule directly from their inbox.",
+      "Tu tienda online lista para recibir pedidos.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      "",
+    link: "/tienda/demo",
   },
 ];
 
@@ -50,7 +51,7 @@ export default function Home2Services() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-black mb-4"
           >
-            All available solutions to easily schedule meetings
+            La herramienta que necesitas para tu negocio
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -59,16 +60,14 @@ export default function Home2Services() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-gray-500 max-w-xl mx-auto"
           >
-            Choose the embedding method that best fits your website and business
-            needs.
+            Tener tu web ya es obvio, pero ahora podemos sumarle la herramienta que mejor se adapte a tu negocio.
           </motion.p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-4 md:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
-              key={service.number}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -76,11 +75,6 @@ export default function Home2Services() {
               className="bg-white rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
               style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}
             >
-              {/* Number */}
-              <div className="text-sm font-medium text-gray-400 mb-4">
-                {service.number}
-              </div>
-
               {/* Title */}
               <h3 className="text-xl font-semibold text-black mb-3">
                 {service.title}

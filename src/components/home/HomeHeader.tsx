@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Home2Header() {
@@ -16,10 +17,9 @@ export default function Home2Header() {
   }, []);
 
   const navLinks = [
-    { label: "Features", href: "#features" },
-    { label: "Services", href: "#services" },
-    { label: "Reserve", href: "#booking" },
-    { label: "About", href: "#about" },
+    { label: "Por que?", href: "#why" },
+    { label: "Demos", href: "#demos" },
+    { label: "Precios", href: "#biling" },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Home2Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold text-black">
-            Brand
+            ReservApp
           </Link>
 
           {/* Desktop Navigation - Centered */}
@@ -54,14 +54,18 @@ export default function Home2Header() {
               href="/auth/login"
               className="text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer hidden sm:block"
             >
-              Sign In
+              Iniciar Sesión
             </Link>
             <Link
               href="/auth/register"
               className="px-4 py-2.5 text-sm font-semibold text-white bg-black rounded-lg hover:bg-gray-800 transition-all cursor-pointer"
             >
-              Get Started
+              Registrarse
             </Link>
+
+            <button>
+              <Image src="/whatsapp.svg" alt="WhatsApp" width={30} height={30}/>
+            </button>
 
             {/* Mobile Menu Button */}
             <button
