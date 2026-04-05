@@ -1,7 +1,15 @@
-import { redirect } from "next/navigation";
+import HomeHeader from "@/components/home/HomeHeader";
+import HomeHero from "@/components/home/HomeHero";
+import HomeServices from "@/components/home/HomeServices";
+import HomeFooter from "@/components/home/HomeFooter";
 
-export default function RootPage() {
-  // Redirect to home2 (promo page based on prompt2.md)
-  // Original landing page preserved at /demo/main
-  redirect("/home");
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-white font-sans">
+      <HomeHeader />
+      <HomeHero />
+      <HomeServices />
+      <HomeFooter />
+    </main>
+  );
 }
