@@ -60,11 +60,11 @@ export default function Footer() {
                   color: "var(--color-primary)",
                 }}
               >
-                ReservApp
+                EmpreTools
               </span>
             </Link>
             <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-              © {currentYear} ReservApp. Todos los derechos reservados.
+              © {currentYear} EmpreTools. Todos los derechos reservados.
             </p>
           </div>
 

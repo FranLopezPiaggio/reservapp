@@ -32,7 +32,7 @@ export default function Home2Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold text-black">
-            ReservApp
+            EmpreTools
           </Link>
 
           {/* Desktop Navigation - Centered */}

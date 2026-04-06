@@ -3,6 +3,10 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+import Booking from '@/components/booking/Booking';
+import BookingModal from '@/components/booking/BookingModal';
+import BookingCalendar from '@/components/demo/booking/BookingCalendar';
+
 export default function ReservasPage() {
   const demos = [
     {
@@ -165,6 +169,9 @@ export default function ReservasPage() {
           </div>
         </div>
       </section>
+
+      <Booking/>
+      <BookingCalendar />
 
       {/* CTA */}
       <section className="py-20 px-4 bg-black">

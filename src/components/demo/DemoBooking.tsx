@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { DemoConfig } from "@/config/demos";
-import BookingModal from "@/components/BookingModal";
+import BookingModal from "@/components/booking/BookingModal";
 
 interface DemoBookingProps {
   config: DemoConfig;

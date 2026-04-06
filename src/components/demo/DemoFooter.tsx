@@ -80,7 +80,7 @@ export default function DemoFooter({ config }: DemoFooterProps) {
             className="text-center text-xs"
             style={{ color: config.colors.textMuted }}
           >
-            Desarrollado con ReservApp
+            Desarrollado con EmpreTools
           </p>
         </div>
       </div>

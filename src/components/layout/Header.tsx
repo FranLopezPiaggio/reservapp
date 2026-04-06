@@ -46,7 +46,7 @@ export default function Header() {
                   color: "var(--color-primary)",
                 }}
               >
-                ReservApp
+                EmpreTools
               </span>
             </Link>
           </div>

@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import Header from "@/components/layout/Header";
+import Hero from "@/components/demo/Hero";
 import Services from "@/components/Services";
-import Booking from "@/components/Booking";
-import Footer from "@/components/Footer";
+import Booking from "@/components/booking/Booking";
+import Footer from "@/components/layout/Footer";
 
 export default function DemoMainPage() {
   // Original landing page preserved for demo purposes
@@ -11,7 +11,7 @@ export default function DemoMainPage() {
       <Header />
       <Hero />
       <Services />
-      <Booking calUsername="reservapp" />
+      <Booking calUsername="EmpreTools" />
       <Footer />
     </main>
   );

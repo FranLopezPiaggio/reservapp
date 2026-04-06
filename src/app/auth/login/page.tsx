@@ -40,7 +40,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl font-bold text-black">
-            ReservApp
+            EmpreTools
           </Link>
         </div>
 
