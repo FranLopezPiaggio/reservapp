@@ -18,8 +18,8 @@ export default function Home2Header() {
 
   const navLinks = [
     { label: "Por que?", href: "#why" },
-    { label: "Demos", href: "#demos" },
-    { label: "Precios", href: "#biling" },
+    { label: "Reservas", href: "/reservas" },
+    { label: "Menus", href: "/menus" },
   ];
 
   return (

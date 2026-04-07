@@ -5,37 +5,29 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Landing + Reservas + WhatsApp",
+    title: "Necesitas Organizar tus turnos",
     description:
-      "Sistema de reservas online con calendario interactivo. Tus clientes reservan 24/7 y tú recibes todo en WhatsApp.",
+      "Web + Reservas + WhatsApp => Sistema de reservas online con calendario interactivo. Tus clientes reservan 24/7 y tú recibes todo en WhatsApp.",
     image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80",
     link: "/reservas",
     badge: "🗓️ Disponible",
   },
   {
-    title: "Landing + Menú Digital + WhatsApp",
+    title: "Necesitas un Menu Digital",
     description:
-      "Menú digital interactivo para restaurantes y cafeterías. Los clientes ven el menú y piden directo por WhatsApp.",
+      "Web + Menú Digital + WhatsApp => Menú digital interactivo para restaurantes y cafeterías. Los clientes ven el menú y piden directo por WhatsApp.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
     link: "/menu",
     badge: "📋 Próximamente",
   },
   {
-    title: "Landing + Tienda Online + WhatsApp",
+    title: "Necesitas vender tus servicios/productos",
     description:
-      "Tu tienda online con catálogo de productos y carrito. Los pedidos se completan por WhatsApp.",
+      "Web + Tienda Online/Catalogo + WhatsApp => Tu tienda online con catálogo de productos y carrito. Los pedidos se completan por WhatsApp.",
     image: "https://images.unsplash.com/photo-1472851294608-062f824d29ab?w=600&q=80",
     link: "/tienda",
     badge: "🛒 Próximamente",
-  },
-  {
-    title: "Landing + Servicios + WhatsApp",
-    description:
-      "Página de servicios profesionales. Muestra tu oferta y recibe consultas directo por WhatsApp.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80",
-    link: "/reservas",
-    badge: "💼 Disponible",
-  },
+  }
 ];
 
 export default function HomeServices() {
@@ -51,7 +43,7 @@ export default function HomeServices() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-black mb-4"
           >
-            Landing Page + Herramientas para tu Negocio
+            Cada uno de tus problemas tiene un herramienta para solucionarlo
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -65,7 +57,7 @@ export default function HomeServices() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function Home2Hero() {
+export default function HomeHero() {
   return (
     <section className="pt-40 pb-20 md:pt-48 md:pb-20 px-4">
       <div className="max-w-[800px] mx-auto text-center">
@@ -31,7 +31,7 @@ export default function Home2Hero() {
               'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
           }}
         >
-          Mostra tus servicios y agenda en una sola pagina
+          La web + herramienta que necesitas vos y tu negocio
         </motion.h1>
 
         {/* Subtitle */}
@@ -41,7 +41,7 @@ export default function Home2Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-500 max-w-[600px] mx-auto mb-10 leading-relaxed"
         >
-          Lo que necesita tu negocio, organizacion y tiempo, deja que tus clientes lleguen a vos y agenden su turno. Vos solo recibis las notificaciones en tu calendario.
+          La herramienta para tu negocio, organizacion y tiempo, deja que tus clientes lleguen a vos.
         </motion.p>
 
         {/* Buttons */}

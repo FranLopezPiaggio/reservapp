@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { DemoConfig } from "@/config/demos";
-import BookingModal from "@/components/booking/BookingModal";
 
 interface DemoBookingProps {
   config: DemoConfig;
@@ -154,14 +153,6 @@ export default function DemoBooking({ config }: DemoBookingProps) {
           )}
         </motion.div>
       </div>
-
-      {/* Booking Modal */}
-      <BookingModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onConfirm={handleBookingConfirm}
-        selectedService={config.name}
-      />
     </section>
   );
 }
