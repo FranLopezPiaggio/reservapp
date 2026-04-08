@@ -24,7 +24,7 @@ export function formatBookingMessage(data: BookingData): string {
   }
 
   if (data.servicePrice) {
-    parts.push(`Precio: ${data.servicePrice}€`);
+    parts.push(`Precio: ${data.servicePrice}$`);
   }
 
   return parts.join('\n');

@@ -3,6 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { generateWhatsAppLink, openWhatsAppLink } from "@/lib/whatsapp";
+
+const WHATSAPP_MESSAGE = "Hola, estoy interesado en Empretools";
 
 export default function Home2Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,6 +18,22 @@ export default function Home2Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleWhatsAppClick = () => {
+    const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+    
+    if (!phone) {
+      console.error("WhatsApp number not configured");
+      return;
+    }
+
+    const link = generateWhatsAppLink({
+      phone,
+      message: WHATSAPP_MESSAGE,
+    });
+
+    openWhatsAppLink(link);
+  };
 
   const navLinks = [
     { label: "Por que?", href: "#why" },
@@ -50,20 +69,12 @@ export default function Home2Header() {
 
           {/* Auth Buttons - Right */}
           <div className="flex items-center gap-4">
-            {/* <Link
-              href="/auth/login"
-              className="text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer hidden sm:block"
+            {/* WhatsApp Button */}
+            <button
+              onClick={handleWhatsAppClick}
+              className="hover:opacity-80 transition-opacity cursor-pointer"
+              aria-label="Contactar por WhatsApp"
             >
-              Iniciar Sesión
-            </Link>
-            <Link
-              href="/auth/register"
-              className="px-4 py-2.5 text-sm font-semibold text-white bg-black rounded-lg hover:bg-gray-800 transition-all cursor-pointer"
-            >
-              Registrarse
-            </Link> */}
-
-            <button>
               <Image src="/whatsapp.svg" alt="WhatsApp" width={40} height={40}/>
             </button>
 
@@ -113,13 +124,15 @@ export default function Home2Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/auth/login"
-                className="text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer"
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                onClick={() => {
+                  handleWhatsAppClick();
+                  setMobileMenuOpen(false);
+                }}
+                className="text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer text-left"
               >
-                Sign In
-              </Link>
+                Contactar
+              </button>
             </nav>
           </div>
         )}

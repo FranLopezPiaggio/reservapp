@@ -150,7 +150,7 @@ export default function CMSServices() {
                   </p>
                 </div>
                 <span className="text-lg font-bold text-black">
-                  {Number(service.price).toFixed(2)} €
+                  {Number(service.price).toFixed(2)} $
                 </span>
               </div>
               {service.description && (
@@ -234,7 +234,7 @@ export default function CMSServices() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Precio (€)
+                    Precio ($)
                   </label>
                   <input
                     type="number"

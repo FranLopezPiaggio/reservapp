@@ -164,7 +164,7 @@ export default function ServiceSelector({
                     className="text-xl font-bold"
                     style={{ color: colors.primary }}
                   >
-                    {service.price}€
+                    {service.price}$
                   </span>
                 </div>
               </motion.div>

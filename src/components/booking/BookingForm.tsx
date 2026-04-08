@@ -100,7 +100,7 @@ export default function BookingForm({
             </div>
             <div className="flex justify-between pt-3 border-t border-gray-200">
               <span style={{ color: colors.textSecondary }}>Total</span>
-              <span className="text-xl font-bold" style={{ color: colors.primary }}>{servicePrice}€</span>
+              <span className="text-xl font-bold" style={{ color: colors.primary }}>{servicePrice}$</span>
             </div>
           </div>
         </div>
