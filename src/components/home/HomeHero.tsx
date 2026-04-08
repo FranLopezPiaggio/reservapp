@@ -16,7 +16,7 @@ export default function HomeHero() {
         >
           <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
           <span className="text-sm font-medium text-gray-600">
-            Lo que necesita tu negocio y tu tiempo!
+          Lo que tu negocio y tiempo estan buscando!          
           </span>
         </motion.div>
 
@@ -41,7 +41,7 @@ export default function HomeHero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-500 max-w-[600px] mx-auto mb-10 leading-relaxed"
         >
-          La herramienta para tu negocio, organizacion y tiempo, deja que tus clientes lleguen a vos.
+          Ahorra tiempo, organizacion y mejora la experiencia de tus clientes.
         </motion.p>
 
         {/* Buttons */}

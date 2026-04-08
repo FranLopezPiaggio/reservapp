@@ -79,12 +79,12 @@ export default function ReservasPage() {
             >
               Ver Demo
             </Link>
-            <Link
+            {/* <Link
               href="/auth/register"
               className="px-6 py-3 border border-gray-200 text-gray-600 font-medium rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-all cursor-pointer"
             >
               Empezar Gratis
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
       </section>
@@ -181,12 +181,12 @@ export default function ReservasPage() {
           <p className="text-gray-300 mb-8">
             Crea tu cuenta gratis y comienza a aceptar reservas hoy mismo.
           </p>
-          <Link
+          {/* <Link
             href="/auth/register"
             className="inline-block px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-all cursor-pointer"
           >
             Crear Cuenta Gratis
-          </Link>
+          </Link> */}
         </div>
       </section>
       <HomeFooter />

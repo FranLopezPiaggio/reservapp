@@ -2,10 +2,13 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import HomeHeader from '@/components/home/HomeHeader';
+import HomeFooter from '@/components/home/HomeFooter';
 
 export default function MenuPage() {
   return (
     <main className="min-h-screen bg-white">
+      <HomeHeader />
       {/* Hero Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -130,6 +133,7 @@ export default function MenuPage() {
           </Link>
         </div>
       </section>
+      <HomeFooter />
     </main>
   );
 }

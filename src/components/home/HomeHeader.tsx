@@ -36,7 +36,7 @@ export default function Home2Header() {
           </Link>
 
           {/* Desktop Navigation - Centered */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 ml-[-100px]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -50,7 +50,7 @@ export default function Home2Header() {
 
           {/* Auth Buttons - Right */}
           <div className="flex items-center gap-4">
-            <Link
+            {/* <Link
               href="/auth/login"
               className="text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer hidden sm:block"
             >
@@ -61,10 +61,10 @@ export default function Home2Header() {
               className="px-4 py-2.5 text-sm font-semibold text-white bg-black rounded-lg hover:bg-gray-800 transition-all cursor-pointer"
             >
               Registrarse
-            </Link>
+            </Link> */}
 
             <button>
-              <Image src="/whatsapp.svg" alt="WhatsApp" width={30} height={30}/>
+              <Image src="/whatsapp.svg" alt="WhatsApp" width={40} height={40}/>
             </button>
 
             {/* Mobile Menu Button */}
