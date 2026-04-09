@@ -20,7 +20,7 @@ export default function ReservasPage() {
       slug: 'salon-belleza',
       name: 'Salón de Belleza',
       tagline: 'Tu momento de relax',
-      image: 'https://images.unsplash.com/photo-1560066984-138dadbdb983?w=600&q=80',
+      image: 'https://img.freepik.com/foto-gratis/mujer-joven-masaje-facial-relajante-salon-spa_176420-7526.jpg',
       description: 'Plataforma integral para salones de belleza y spas.',
     },
     {
@@ -36,9 +36,9 @@ export default function ReservasPage() {
     <main className="min-h-screen bg-white">
       <HomeHeader />
       {/* Hero Section */}
-      <section className="py-24 px-4 opacity-80"
+      <section className="py-24 mt-20 px-4 opacity-80"
       style={{
-        backgroundImage: "url('/bg-3.jpg')",
+        backgroundImage: "url('img/bg-3.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -199,7 +199,7 @@ export default function ReservasPage() {
         </div>
       </section>
       
-      <div className='bg-white h-50'></div>
+      <div className='bg-white h-20'></div>
       <HomeFooter />
     </main>
   );

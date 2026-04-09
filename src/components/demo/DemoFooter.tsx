@@ -66,7 +66,7 @@ export default function DemoFooter({ config }: DemoFooterProps) {
                 style={{ color: config.colors.textSecondary }}
               >
                  <Image 
-                    src={social === "Instagram" ? "/instagram-svgrepo-com.svg" : "/facebook-svgrepo-com.svg"}
+                    src={social === "Instagram" ? "svg/instagram-svgrepo-com.svg" : "svg/facebook-svgrepo-com.svg"}
                     alt={social}
                     width={20}
                     height={20}

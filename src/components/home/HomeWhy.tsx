@@ -3,19 +3,23 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import ClockSvg from "@/assets/svg/clock-three-svgrepo-com.svg"
+import CredibilitySvg from "@/assets/svg/check-all-big-svgrepo-com.svg"
+import MarketingSvg from "@/assets/svg/monitor-trend-svgrepo-com.svg"
+
 const benefits = [
   {
-    emoji: "🕐",
+    emoji: ClockSvg,
     title: "Disponibilidad 24/7",
     description: "Tu negocio siempre abierto, sin importar la hora ni el día.",
   },
   {
-    emoji: "🎯",
+    emoji: CredibilitySvg ,
     title: "Credibilidad",
     description: "Una web profesional genera confianza en tus clientes.",
   },
   {
-    emoji: "📈",
+    emoji: MarketingSvg,
     title: "Marketing",
     description: "Atrae nuevos clientes y fideliza a los existentes.",
   },
@@ -60,7 +64,7 @@ export default function HomeWhy() {
               <div className="relative bg-white rounded-2xl p-6 h-full hover:translate-y-[-4px] transition-transform duration-300">
                 {/* Emoji Icon */}
                 <div className="text-4xl mb-4">
-                  {benefit.emoji}
+                  <Image src={benefit.emoji} alt={benefit.title} width={50} height={50} />
                 </div>
 
                 {/* Title */}

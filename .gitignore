@@ -46,11 +46,10 @@ next-env.d.ts
 design-system/
 design-system/*
 .mcp.json
-todoconia-guia-design-system.md
 .extra/
 .extra/*
 CLAUDE.md
 AGENTS.md
 
-
+# extra
 approach.txt

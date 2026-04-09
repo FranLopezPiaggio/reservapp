@@ -36,7 +36,7 @@ export default function Home2Header() {
   };
 
   const navLinks = [
-    { label: "Por que?", href: "#why" },
+    // { label: "Por que?", href: "#why" },
     { label: "Reservas", href: "/reservas" },
     { label: "Menus", href: "/menus" },
   ];
@@ -75,7 +75,7 @@ export default function Home2Header() {
               className="hover:opacity-80 transition-opacity cursor-pointer"
               aria-label="Contactar por WhatsApp"
             >
-              <Image src="/whatsapp.svg" alt="WhatsApp" width={40} height={40}/>
+              <Image src="svg/whatsapp.svg" alt="WhatsApp" width={40} height={40}/>
             </button>
 
             {/* Mobile Menu Button */}

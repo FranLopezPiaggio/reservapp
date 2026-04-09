@@ -17,14 +17,14 @@ const services = [
     description:
       "Web + Menú Digital + WhatsApp => Menú digital interactivo para restaurantes y cafeterías. Los clientes ven el menú y piden directo por WhatsApp.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
-    link: "/menu",
+    link: "/menus",
     badge: "📋 Próximamente",
   },
   {
     title: "Necesitas vender tus servicios/productos",
     description:
       "Web + Tienda Online/Catalogo + WhatsApp => Tu tienda online con catálogo de productos y carrito. Los pedidos se completan por WhatsApp.",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29ab?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/tienda",
     badge: "🛒 Próximamente",
   }

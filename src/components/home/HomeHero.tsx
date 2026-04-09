@@ -3,11 +3,32 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import { generateWhatsAppLink, openWhatsAppLink } from "@/lib/whatsapp";
+
+const WHATSAPP_MESSAGE = "Hola, estoy interesado en Empretools";
+
 export default function HomeHero() {
+
+  const handleWhatsAppClick = () => {
+      const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+      
+      if (!phone) {
+        console.error("WhatsApp number not configured");
+        return;
+      }
+  
+      const link = generateWhatsAppLink({
+        phone,
+        message: WHATSAPP_MESSAGE,
+      });
+  
+      openWhatsAppLink(link);
+    };
+
   return (
     <section className="pt-10 pb-20 md:pt-40 md:pb-20 px-4"
     style={{
-    backgroundImage: "url('/hero-bg.jpg')",
+    backgroundImage: "url('img/hero-bg.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -53,12 +74,14 @@ export default function HomeHero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
-          <Link
-            href="/auth/register"
+          <button
+            onClick={() => {
+              handleWhatsAppClick();
+            }}
             className="px-8 py-3.5 text-base font-semibold text-white bg-black rounded-lg hover:bg-gray-800 transition-all hover:scale-[1.02] cursor-pointer"
           >
             Contactanos
-          </Link>
+          </button>
         </motion.div>
 
         {/* Mockup Image */}
