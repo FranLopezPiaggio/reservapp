@@ -40,9 +40,17 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
+# AGENTS
 .agents/
-.extra/
-.mcp.json
-approach.txt
+.agents/*
 design-system/
+design-system/*
+.mcp.json
+todoconia-guia-design-system.md
+.extra/
+.extra/*
+CLAUDE.md
+AGENTS.md
+
+
+approach.txt
