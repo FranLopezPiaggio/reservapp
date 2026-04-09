@@ -77,7 +77,7 @@ export interface DemoFooter {
 
 export interface DemoConfig {
   slug: string;
-  category: string;
+  category: 'reservas' | 'tienda' | 'menu';
   name: string;
   tagline: string;
   description: string;
