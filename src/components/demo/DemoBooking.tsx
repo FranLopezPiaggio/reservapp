@@ -46,9 +46,8 @@ export default function DemoBooking({ config }: DemoBookingProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 font-heading"
             style={{
-              fontFamily: "var(--font-heading)",
               color: config.colors.text,
             }}
           >
@@ -105,9 +104,8 @@ export default function DemoBooking({ config }: DemoBookingProps) {
             </div>
 
             <h3
-              className="text-xl font-bold mb-3"
+              className="text-xl font-bold mb-3 font-heading"
               style={{
-                fontFamily: "var(--font-heading)",
                 color: config.colors.text,
               }}
             >

@@ -7,16 +7,16 @@ export default function Home2Footer() {
     { label: "Privacy", href: "/privacy" },
     { label: "Terms", href: "/terms" },
     { label: "Contact", href: "/contact" },
-    { label: "Twitter", href: "https://twitter.com" },
-    { label: "GitHub", href: "https://github.com" },
+    // { label: "Twitter", href: "https://twitter.com" },
+    // { label: "GitHub", href: "https://github.com" },
   ];
 
   return (
-    <footer className="py-16 md:py-20 px-4 bg-gray-50 border-t border-gray-100">
+    <footer className="py-10 md:py-10 px-4 bg-black border-t border-gray-100">
       <div className="max-w-[1200px] mx-auto">
         {/* Logo */}
         <div className="mb-8">
-          <Link href="/" className="text-xl font-bold text-black">
+          <Link href="/" className="text-xl font-bold text-white">
             EmpreTools
           </Link>
         </div>

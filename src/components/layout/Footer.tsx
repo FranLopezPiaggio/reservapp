@@ -54,9 +54,8 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start gap-2">
             <Link href="/" className="flex items-center gap-2">
               <span
-                className="text-xl font-bold"
+                className="text-xl font-bold font-heading"
                 style={{
-                  fontFamily: "var(--font-heading)",
                   color: "var(--color-primary)",
                 }}
               >

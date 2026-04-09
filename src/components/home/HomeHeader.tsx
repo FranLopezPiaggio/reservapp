@@ -50,7 +50,7 @@ export default function Home2Header() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-black">
+          <Link href="/" className="text-xl font-bold text-black font-heading">
             EmpreTools
           </Link>
 

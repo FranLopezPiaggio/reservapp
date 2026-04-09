@@ -26,7 +26,7 @@ export default function DemoHeader({ config }: DemoHeaderProps) {
       }`}
       style={scrolled ? { backgroundColor: `${config.colors.surface}dd` } : {}}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto ml-8 px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
@@ -34,9 +34,8 @@ export default function DemoHeader({ config }: DemoHeaderProps) {
             className="flex items-center gap-2"
           >
             <span
-              className="text-xl font-bold"
+              className="text-xl font-bold font-heading"
               style={{
-                fontFamily: "var(--font-heading)",
                 color: config.colors.primary,
               }}
             >
@@ -54,7 +53,7 @@ export default function DemoHeader({ config }: DemoHeaderProps) {
               Servicios
             </Link>
             <Link
-              href="#booking"
+              href="#services"
               className="text-sm font-medium transition-colors duration-200 hover:opacity-80 cursor-pointer"
               style={{ color: config.colors.text }}
             >
@@ -68,7 +67,7 @@ export default function DemoHeader({ config }: DemoHeaderProps) {
               Contacto
             </Link>
             <Link
-              href="#booking"
+              href="#services"
               className="px-5 py-2.5 rounded-xl font-semibold text-white transition-all duration-200 hover:opacity-90 cursor-pointer"
               style={{ backgroundColor: config.colors.cta }}
             >

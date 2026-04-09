@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { DemoConfig } from "@/config/demos";
 
@@ -26,9 +27,8 @@ export default function DemoFooter({ config }: DemoFooterProps) {
               className="flex items-center gap-2"
             >
               <span
-                className="text-xl font-bold"
+                className="text-xl font-bold font-heading"
                 style={{
-                  fontFamily: "var(--font-heading)",
                   color: config.colors.primary,
                 }}
               >
@@ -56,7 +56,7 @@ export default function DemoFooter({ config }: DemoFooterProps) {
 
           {/* Social Links Placeholder */}
           <div className="flex items-center gap-4">
-            {["Instagram", "Twitter", "Facebook"].map((social) => (
+            {["Instagram", "Facebook"].map((social) => (
               <a
                 key={social}
                 href="#"
@@ -65,7 +65,13 @@ export default function DemoFooter({ config }: DemoFooterProps) {
                 className="p-2 rounded-lg hover:opacity-80 transition-colors cursor-pointer"
                 style={{ color: config.colors.textSecondary }}
               >
-                <span className="text-sm">{social[0]}</span>
+                 <Image 
+                    src={social === "Instagram" ? "/instagram-svgrepo-com.svg" : "/facebook-svgrepo-com.svg"}
+                    alt={social}
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                />
               </a>
             ))}
           </div>

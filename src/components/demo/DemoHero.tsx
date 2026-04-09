@@ -23,8 +23,7 @@ export default function DemoHero({ config }: DemoHeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading"
           >
             {config.hero.headline}
           </motion.h1>
@@ -33,8 +32,7 @@ export default function DemoHero({ config }: DemoHeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-body)" }}
+            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-body"
           >
             {config.hero.subtext}
           </motion.p>
@@ -45,7 +43,7 @@ export default function DemoHero({ config }: DemoHeroProps) {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
             <Link
-              href="#booking"
+              href="#services"
               className="inline-block px-8 py-4 text-lg font-semibold text-white rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
               style={{
                 backgroundColor: config.colors.cta,

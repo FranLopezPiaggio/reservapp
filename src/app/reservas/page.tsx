@@ -36,7 +36,13 @@ export default function ReservasPage() {
     <main className="min-h-screen bg-white">
       <HomeHeader />
       {/* Hero Section */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 opacity-80"
+      style={{
+        backgroundImage: "url('/bg-3.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -170,17 +176,20 @@ export default function ReservasPage() {
           </div>
         </div>
       </section>
-      <BookingCalendar />
+      {/* <BookingCalendar /> */}
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-black">
+      <section className="py-20 px-4 bg-yellow">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-black mb-4">
             ¿Listo para empezar?
           </h2>
-          <p className="text-gray-300 mb-8">
-            Crea tu cuenta gratis y comienza a aceptar reservas hoy mismo.
+          <p className="text-gray-500 mb-8">
+              Tengamos una reunion para ver que necesita tu negocio
           </p>
+          <button className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-all cursor-pointer">
+            Agenda una reunion
+          </button>
           {/* <Link
             href="/auth/register"
             className="inline-block px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-all cursor-pointer"
@@ -189,6 +198,8 @@ export default function ReservasPage() {
           </Link> */}
         </div>
       </section>
+      
+      <div className='bg-white h-50'></div>
       <HomeFooter />
     </main>
   );

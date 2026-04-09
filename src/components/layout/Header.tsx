@@ -40,9 +40,8 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2">
               <span
-                className="text-2xl font-bold"
+                className="text-2xl font-bold font-heading"
                 style={{
-                  fontFamily: "var(--font-heading)",
                   color: "var(--color-primary)",
                 }}
               >

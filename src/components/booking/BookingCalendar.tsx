@@ -86,7 +86,7 @@ export default function Home2Booking() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-black mb-4"
           >
-            See how to embed a booking widget on your website
+            Calendario Interactivo para reserva de turnos
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

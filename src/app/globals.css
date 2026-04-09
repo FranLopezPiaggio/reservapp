@@ -1,31 +1,54 @@
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap");
-
 @import "tailwindcss";
 
-:root {
-  /* Design System Colors */
-  --color-primary: #dc2626;
-  --color-secondary: #f87171;
-  --color-cta: #ca8a04;
-  --color-cta-hover: #a16207;
-  --color-background: #fef2f2;
-  --color-surface: #ffffff;
-  --color-text: #450a0a;
-  --color-text-secondary: #7f1d1d;
-  --color-text-muted: #94a3b8;
+/* =============================================================================
+   DESIGN TOKENS - Font System
+   Using next/font variables from layout.tsx
+   ============================================================================= */
 
-  /* Fonts */
-  --font-heading: "Playfair Display SC", serif;
-  --font-body: "Karla", sans-serif;
+:root {
+  /* Brand Colors */
+  --color-primary: #1a1a1a;
+  --color-secondary: #c9a227;
+  --color-cta: #c9a227;
+  --color-cta-hover: #a88620;
+  --color-background: #fafafa;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #888888;
+  --color-yellow: #fff176;
+
+  /* 
+   Font Variables (linked to next/font in layout.tsx)
+   These reference the CSS variables set by next/font
+   */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-accent: var(--font-accent);
 }
+
+/* =============================================================================
+   TAILWIND THEME EXTENSION
+   ============================================================================= */
 
 @theme inline {
+  /* Colors */
   --color-background: var(--color-background);
   --color-foreground: var(--color-text);
-  --font-sans: var(--font-body);
-  --font-heading: var(--font-heading);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-cta: var(--color-cta);
+  --color-yellow: var(--color-yellow);
+  
+  /* Fonts - Tailwind will use these automatically */
+  --font-sans: var(--font-body);      /* Default body text */
+  --font-heading: var(--font-heading); /* Headings h1-h6 */
+  --font-accent: var(--font-accent);   /* Special highlights */
 }
+
+/* =============================================================================
+   BASE STYLES
+   ============================================================================= */
 
 body {
   background: var(--color-background);
@@ -33,6 +56,7 @@ body {
   font-family: var(--font-body);
 }
 
+/* Headings - Uses Geist Mono from --font-heading */
 h1,
 h2,
 h3,
@@ -40,7 +64,28 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
+  font-weight: 700;
 }
+
+/* =============================================================================
+   FONT UTILITY CLASSES
+   ============================================================================= */
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* =============================================================================
+   UTILITIES
+   ============================================================================= */
 
 /* Smooth scrolling */
 html {

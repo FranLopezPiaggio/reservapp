@@ -38,8 +38,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading"
           >
             {headline}
           </motion.h1>
@@ -48,8 +47,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-body)" }}
+            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-body"
           >
             {subtext}
           </motion.p>
