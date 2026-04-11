@@ -134,9 +134,9 @@ export default function CMSSettings() {
                   onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
                   className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:border-black"
                 >
-                  <option value="EUR">EUR ($)</option>
-                  <option value="USD">USD ($)</option>
-                  <option value="GBP">GBP (£)</option>
+                  <option value="ARG">PESO ($)</option>
+                  <option value="USD">USD (U$D)</option>
+                  <option value="BRL">REAL (R)</option>
                 </select>
               </div>
               <div>
@@ -148,10 +148,9 @@ export default function CMSSettings() {
                   onChange={(e) => setFormData({ ...formData, timezone: e.target.value })}
                   className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:border-black"
                 >
-                  <option value="Europe/Madrid">España (GMT+1)</option>
-                  <option value="Europe/London">Reino Unido (GMT+0)</option>
-                  <option value="America/New_York">EE.UU. Este (GMT-5)</option>
-                  <option value="America/Los_Angeles">EE.UU. Oeste (GMT-8)</option>
+                  <option value="Argentina">Argentina (GMT-3)</option>
+                  <option value="Chile">Chile (GMT-5)</option>
+                  <option value="Brasil">Brasil (GMT-3)</option>
                 </select>
               </div>
             </div>

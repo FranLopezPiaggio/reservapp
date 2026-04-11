@@ -40,7 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# AGENTS
+# AGENTS-skills
 .agents/
 .agents/*
 design-system/
@@ -50,6 +50,7 @@ design-system/*
 .extra/*
 CLAUDE.md
 AGENTS.md
+skills-lock.json
 
 # extra
 approach.txt

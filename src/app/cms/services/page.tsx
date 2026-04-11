@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { getTenantIdFromJWT } from "@/lib/supabase/tenant-jwt";
 
 interface Service {
   id: string;
@@ -18,6 +19,7 @@ export default function CMSServices() {
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [editingService, setEditingService] = useState<Service | null>(null);
+  const [tenantId, setTenantId] = useState<string | null>(null);
 
   // Form state
   const [formData, setFormData] = useState({
@@ -28,14 +30,22 @@ export default function CMSServices() {
   });
 
   useEffect(() => {
-    loadServices();
+    getTenantIdFromJWT().then(tid => {
+      setTenantId(tid);
+      loadServices(tid);
+    });
   }, []);
 
-  const loadServices = async () => {
+  const loadServices = async (tid: string | null) => {
+    if (!tid) {
+      setLoading(false);
+      return;
+    }
     try {
       const { data, error } = await supabase
         .from("services")
         .select("*")
+        .eq("tenant_id", tid)
         .order("name");
 
       if (error) throw error;
@@ -57,13 +67,16 @@ export default function CMSServices() {
           .eq("id", editingService.id);
         if (error) throw error;
       } else {
-        const { error } = await supabase.from("services").insert(formData);
+        const { error } = await supabase.from("services").insert({
+          ...formData,
+          // tenant_id is auto-set by trigger
+        });
         if (error) throw error;
       }
       setShowModal(false);
       setEditingService(null);
       setFormData({ name: "", description: "", duration_minutes: 30, price: 0 });
-      loadServices();
+      loadServices(tenantId);
     } catch (error) {
       console.error("Error saving service:", error);
     }
@@ -85,7 +98,7 @@ export default function CMSServices() {
     try {
       const { error } = await supabase.from("services").delete().eq("id", id);
       if (error) throw error;
-      loadServices();
+      loadServices(tenantId);
     } catch (error) {
       console.error("Error deleting service:", error);
     }
@@ -98,7 +111,7 @@ export default function CMSServices() {
         .update({ is_active: !isActive })
         .eq("id", id);
       if (error) throw error;
-      loadServices();
+      loadServices(tenantId);
     } catch (error) {
       console.error("Error toggling service:", error);
     }
@@ -166,6 +179,12 @@ export default function CMSServices() {
                   {service.is_active ? "Activo" : "Inactivo"}
                 </button>
                 <div className="flex gap-2">
+                  <a
+                    href={`/cms/services/${service.id}/resources`}
+                    className="text-xs text-blue-600 hover:underline"
+                  >
+                    Recursos
+                  </a>
                   <button
                     onClick={() => handleEdit(service)}
                     className="text-xs text-gray-600 hover:underline"
